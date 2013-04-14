@@ -3,7 +3,7 @@
   <groupId>plugin.gunther</groupId>
   <artifactId>chatsupport</artifactId>
   <version>1</version>
-  <name>ChatSupport</name>
+  <name>SupportChat</name>
   <repositories>
     <repository>
       <id>bukkit-repo</id>
