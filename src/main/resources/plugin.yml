@@ -1,6 +1,6 @@
 name: SupportChat
 main: plugin.gunther.chatsupport.ChatSupport
-version: 0.7.0
+version: 0.7.1
 authors: [Gunther]
 commands:
   support:

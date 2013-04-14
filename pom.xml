@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>plugin.gunther</groupId>
   <artifactId>chatsupport</artifactId>
-  <version>1</version>
+  <version>0.7.1</version>
   <name>SupportChat</name>
   <repositories>
     <repository>
