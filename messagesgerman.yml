@@ -1,0 +1,78 @@
+#Hier kannst du die Chat-Nachrichten, die dieses Plugin benutzt verändern. 
+# %s, %1$s and %2$d vertreten entweder den Namen eines Spielers oder eines Chat-Raums. Wenn sie weiter angezeigt werden sollen, dann entferne sie nicht.
+# §<xy> und &<xy> machen den text farbig. Hier sind alle benutzbaren Chat-Farben-Abkürzungen aufgelistet:
+# BLACK '0', DARK_BLUE '1', DARK_GREEN '2', DARK_AQUA '3', DARK_RED '4', DARK_PURPLE '5', GOLD '6', GRAY '7', DARK_GRAY '8', BLUE '9', GREEN 'a', 
+# AQUA 'b', RED 'c', YELLOW 'e', WHITE 'f', MAGIC 'k',  BOLD 'l',  STRIKETHROUGH 'm', UNDERLINE 'n', ITALIC 'o', 
+# Entfernt bitte nicht die " ' ", die die Meldungen umgeben, da sonst manche Zeichen nicht funktionieren werden.
+
+support:
+  prefix: '§c[Support] '
+  chatformat: '{Support-Prefix} §f{PlayerName} [{ChatName}]: {Message}'
+  hidechatinsupportchats: false
+#Diese Einstellung ist für Server gedacht, die keine Permissions einrichten wollen.
+  ignorepermissions:
+    #Admins/Ops können alle Funktionen von Support-Chat benutzen:
+    op: false
+    #Alle Spieler können die Commands nachschauen und Support-Anfragen stellen
+    user: false  
+  messagessuccess: Erfolgreich messages.yml geladen
+  reloadsuccess: Erfolgreich suppportchat neu geladen
+  unknowncommand: Unbekanntes Command. Benutze /support um eine Anfrage zu machen oder /support commands um alle commands zu sehen.
+  nopermission: Dir ist es nicht erlaubt, dieses Command zu nutzen.
+  
+request:
+  allowmultiplerequests: true
+  usecooldown: true
+  #zeit in Sekunden:
+  cooldown: 10
+  usetoleavechat: true
+  toadmins: '§f%1$s bittet um Hilfe. Er ist in Chat Nummer %2$d.'
+  success: '§fAlle verantwortlichen Spieler haben eine Meldung über deine Anfrage erhalten.'
+  noadmins: '§fLeider ist niemand online, der dir helfen könnte.'
+  alreadyrequested:
+    multiplerequests:
+      'true': '§fEs wurde noch eine Anfrage versandt.'
+      'false': '§fDu hast schon um Hilfe gebeten.'
+    incooldown: '§fDu musst kurz warten, bevor du nochmal um Hilfe bitten kannst.'
+  alreadyinchat: '§fDu bist schon in einem Support-Chat-Raum.'
+  
+join:
+  singleplayer: '§f%s ist in den Support-Chat gekommen, um dir zu helfen.'
+  multipleplayers: '§f%s hat den Chat betreten.'
+  success: '§fDu bist erfolgreich einem Chat beigetreten.'
+  alreadyinchat: '§fDu bist schon in einem Chat. Du musst ihn erst verlassen.'
+  abondened: '§fIn diesem Chat-Raum ist niemand.'
+  notexisting: '§fDieser Chat existiert nicht.'
+  
+help:
+  notinchatorqueue: '§fDieser Spieler ist weder in einem Chat-Raum noch in der Warteschlange.'
+  
+leave:
+  queue:
+    player: '§fDu hast die Warteschlange verlassen.'
+    toadmins: '§f%s benötigt keine Hilfe mehr.'
+  chat:
+    success: '§fDu hast den Chat verlassen.'
+    toplayers: '§f%s hat den Chat verlassen.'
+    chatterminated: '§fDer Chat wurde beendet.'
+  notinchatorqueue: '§fDu bist in keinem Chat oder Warteschlange, den/die du verlassen könntest.'
+  
+commands:
+  request: '</support>: mache eine Anfrage oder verlasse den Chat, indem du gerade bist.'
+  join: '</support join (chatroom-name)>: betrete einen Chat-Room um jemandem zu helfen. Die Chat-Nummer kommt mit der Anfrage.'
+  help: '</support help (player)>: fast so wie /support join nur, dass du den Spieler-Namen statt dem Chat-Namen brauchst.'
+  leave: '</support leave>: verlasse den Chat oder die Warteschlange, in der du gerade bist.'
+  chat: '</support chat (message)>: hiermit redest du mit allen Spielern auch wenn du in einem Support-Chat bist.'
+  reload: '</support reload>: hiermit wird messages.yml neu geladen. Nützlich nachdem man die messages geändert hat.'
+  messages: '</support messages (english/german)>: hiermit wird die originale support-chat-messages.yml in der angegebenen Sprache geladen. Nützlich,
+  falls die eigene messages.yml nicht funktioniert oder man die Sprache ändern möchte.'
+  commands: '</support commands>: zeigt dir wieder diese seite'
+  queue: '</support queue>: zeigt alle spieler, die hilfe benötigen'  
+  
+queue:
+  format: '§fAuf Hilfe warten: '
+  empty: '§fEs scheint keiner Hilfe zu benötigen.'
+  showonjoin: false
+  scheduledqueue: false
+#Zeit in Sekunden:  
+  frequency: 5  

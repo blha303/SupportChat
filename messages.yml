@@ -1,0 +1,85 @@
+#Here you can edit the messages, displayed by this plugin. 
+# %s, %1$s and %2$d represent the name of a player or the name of a chat. Dont remove them, if you want them to be displayed.
+# §<xy> and &<xy> make the following text coloured. Here are all the codes you can use:
+# BLACK '0', DARK_BLUE '1', DARK_GREEN '2', DARK_AQUA '3', DARK_RED '4', DARK_PURPLE '5', GOLD '6', GRAY '7', DARK_GRAY '8', BLUE '9', GREEN 'a', 
+# AQUA 'b', RED 'c', YELLOW 'e', WHITE 'f', MAGIC 'k',  BOLD 'l',  STRIKETHROUGH 'm', UNDERLINE 'n', ITALIC 'o', 
+#Dont remove the " ' " around the messages, if you want to use ":" inside the message.
+
+support:
+  prefix: '§c[Support] '
+  chatformat: '{Support-Prefix} §f{PlayerName} [{ChatName}]: {Message}'
+  hidechatinsupportchats: false
+
+#these are options, created for servers that don't want or don't need to set up permissions:  
+  ignorepermissions:
+    #ops can use all functions of support-chat:
+    op: false
+    #everyone can request help and use /support commands 
+    user: false  
+  messagessuccess: 'Succesfully loaded messages.yml'
+  reloadsuccess: 'Successfully reloaded SupportChat'
+  unknowncommand: 'Unknown Command. Use /command to make a request or /support commands to see a list of all commands.'
+  nopermission: 'You don''t have permission to use this command'
+  
+request:
+  allowmultiplerequests: true
+  usecooldown: true
+  #time in seconds:
+  cooldown: 10
+  usetoleavechat: true
+  toadmins: '§f%1$s is requesting support. He is in chat %2$d'
+  success: '§fAll responsible players have been informed about your request.'
+  noadmins: '§fSorry, but there is no one online to help you.'
+  alreadyrequested:
+    multiplerequests:
+      'true': '§fThere has been sent another request to all responsible players.'
+      'false': '§fSorry, but you already requested help'
+    incooldown: '§fYou have to wait a little bit before you can request help again.'
+  alreadyinchat: '§fYou already joined a support-chat.'
+  
+join:
+  singleplayer: '§f%s joined the support-chat to help you.'
+  multipleplayers: '§f%s joined the support-chat.'
+  success: '§fYou successfully joined a support-chat.'
+  alreadyinchat: '§fYou already joined a support-chat. You have to leave it first.'
+  abondened: '§fThat support-chat is abandoned.'
+  notexisting: '§fThat support-chat isn''t existing.'
+  
+help:
+  notinchatorqueue: '§fThis person isn''t in a support-chat or a queue.'
+  
+leave:
+  queue:
+    player: '§fYou are not longer in the queue.'
+    toadmins: '§f%s doesn''t need support anymore.'
+  chat:
+    success: '§fYou successfully left the support-chat.'
+    toplayers: '§f%s left the chat.'
+    chatterminated: '§fThe support-chat has been terminated.'
+  notinchatorqueue: '§fYou are not in a support-chat or a queue.'
+  
+commands:
+  request: '</support>: make a request or leave the support chat, you''re currently
+    in.'
+  join: '</support join (chatroom-name)>: join a chat to help someone. You get the
+    chat-name with the request.'
+  help: '</support help (player)>: similar to previous one but you need the playername
+    instead of the chat-name.'
+  leave: '</support leave>: leave the support-chat or the queue, you''re currently
+    in.'
+  chat: '</support chat (message)>: allows you to chat with all online players while
+    you''re in a support-chat.'
+  reload: '</support reload>: allows you to reload the meassages.yml, after you changed
+    it.'
+  messages: '</support messages (english/german)>: allows you to change the language
+    and to reload a fresh messages.yml, if you messed it up.'
+  commands: '</support commands>: shows this help page again'
+  queue: '</support queue>: shows you all players, that are requesting help'
+  
+queue:
+  format: '§fThe following players are waiting for help: '
+  empty: '§fNo one seems to need help.'
+  showonjoin: false
+  scheduledqueue: false
+#Time in minutes:  
+  frequency: 5  
