@@ -155,14 +155,14 @@ public class ChatSupport extends JavaPlugin implements Listener {
                 }
             }
 
-        } else if (this.messages.getBoolean("support.hidechatinsupportchats", true)) {
+        }/* else if (this.messages.getBoolean("support.hidechatinsupportchats", true)) {
             int format6 = getServer().getOnlinePlayers().length;
             for (int i = 0; i < format6; i++) {
                 Player p = getServer().getOnlinePlayers()[i];
                 if (chatting.containsKey(p.getName()))
                     e.getRecipients().remove(p);
             }
-        }
+        } */
     }
 
     @EventHandler
