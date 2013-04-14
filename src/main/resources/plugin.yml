@@ -1,7 +1,7 @@
-name: SupportChat
-main: plugin.gunther.chatsupport.ChatSupport
-version: 0.7.1
-authors: [Gunther]
+name: ${project.name}
+main: ${project.groupId}.${project.artifactId}.ChatSupport
+version: ${project.version}
+authors: [Gunther, blha303]
 commands:
   support:
     description: general command of support-chat
