@@ -3,7 +3,7 @@
 bin
 lib
 out
-target
+target/
 *.com
 *.class
 *.dll
