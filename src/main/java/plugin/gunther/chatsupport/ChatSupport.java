@@ -18,7 +18,8 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerChatEvent;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
+//import org.bukkit.event.player.PlayerChatEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -32,7 +33,8 @@ public class ChatSupport extends JavaPlugin
   File messagesfile;
   FileConfiguration messages;
 
-  public void onEnable()
+  @SuppressWarnings("deprecation")
+public void onEnable()
   {
     getServer().getPluginManager().registerEvents(this, this);
     cachestart();
@@ -157,8 +159,7 @@ public class ChatSupport extends JavaPlugin
   }
 
   @EventHandler
-//  public void PlayerChat(AsyncPlayerChatEvent e)
-  public void PlayerChat(PlayerChatEvent e)
+  public void PlayerChat(AsyncPlayerChatEvent e)
   {
     Map<String, Object> chatting = this.chatcache.getConfigurationSection("Chattingplayers:").getValues(true);
     List<String> publicchat = this.chatcache.getStringList("Usingpublicchat:");

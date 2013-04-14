@@ -3,7 +3,7 @@
   <groupId>plugin.gunther</groupId>
   <artifactId>chatsupport</artifactId>
   <version>1</version>
-  <name>ChatSupport</name>
+  <name>SupportChat</name>
   <repositories>
     <repository>
       <id>bukkit-repo</id>
@@ -59,7 +59,7 @@
     <dependency>
       <groupId>org.bukkit</groupId>
       <artifactId>bukkit</artifactId>
-      <version>1.2.5-R5.0</version>
+      <version>1.5.1-R0.2-SNAPSHOT</version>
     </dependency>
   </dependencies>
 </project>
