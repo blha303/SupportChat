@@ -1,0 +1,96 @@
+name: SupportChat
+main: plugin.gunther.chatsupport.ChatSupport
+version: 0.7.1
+authors: [Gunther, blha303]
+commands:
+  support:
+    description: general command of support-chat
+    
+permissions:
+  support.*:
+    description: allows you to use all support-chat functions
+    default: false
+    children:
+        support.receive: true
+        support.request: true
+        support.join: true
+        support.listen: true
+        support.messages: true
+        support.reload: true
+        support.commands: true
+        support.queue: true
+        support.scheduledqueue: true
+        support.queueonjoin: true
+        
+  support.mod:
+    description: the player will get all permissions needed to help people in supportchat without being able to mess something up  
+    default: false
+    children:
+        support.receive: true
+        support.request: true
+        support.join: true
+        support.listen: true
+        support.messages: false
+        support.reload: false
+        support.commands: true 
+        support.queue: true
+        support.scheduledqueue: true
+        support.queueonjoin: true
+  
+  
+  support.user:
+    description: the player will be able to use support-chat to get help
+    default: false
+    children:
+        support.receive: false
+        support.request: true
+        support.join: false
+        support.listen: false
+        support.messages: false
+        support.reload: false
+        support.commands: true
+        support.queue: false
+        support.scheduledqueue: false
+        support.queueonjoin: false
+  
+  
+  support.receive:
+    description: decides, who will be informed about support-requests
+    default: false
+  
+  support.request:
+    description: allows you to make a support-request
+    default: false
+  
+  support.join:
+    description: allows a player to join a support-chat
+    default: false
+  
+  support.listen:
+    description: allows  a player to listen to support-chats
+    default: false
+    
+  support.messages:
+    description: allows player to reload a fresh messages.yml
+    default: false   
+    
+  support.reload:
+    description: allows a player to use /support reload 
+    default: false
+    
+  support.commands:
+    description: allows a player to lookup all commands with /support commands 
+    default: false
+    
+  support.queue:
+    desciption: allows a player to see the queue with /support queue
+    default: false  
+    
+  support.scheduledqueue:
+    description: if queue.scheduledqueue in messages.yml is true, the player will frequently get a list with all players, that are waiting for help.  
+    default: false
+    
+  support.queueonjoin:
+    description: if queue.showonjoin in messages.yml is true, the player will get a list of all waiting players when he joins.
+    default: false
+    
